@@ -60,20 +60,25 @@ header .headline{
 }
 
 
-.main{
-	width: 840px;
+main{
+	width: 800px;
 	background-color: green;
 	margin: 0 auto; /*中央よせ（余白がないとできない）*/
+	padding: 70px 0;	/*内側に余白*/
 }
 .blog{
-	width: 600px;
-	height: 1400px;
+	width: 540px;
 	background-color: limegreen;
 	float: left;　/*要素を左揃えで並ばせる*/
+	margin-right: 30px;	/*領域の右側に余白*/
 	}
+.blog-headline{
+	border-bottom: 8px solid #f7f7f7;
+	text-align: center;
+	line-height: 0.6:;
+}
 .sidebar{
-	width: 240px;
-	height: 1400px;
+	width: 230px;
 	background-color: palegreen;
 	float: left; /*要素を左揃えで並ばせる*/
 }
