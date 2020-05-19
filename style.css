@@ -18,6 +18,7 @@ a{
 header{
 	width: 100%;
 	text-align: center;
+	padding: 15px 0;	/*なんでmarginで空けたらいけない？*/
 }
 /*headerタグ内のheadlineクラスのみに反映*/
 header .headline{
@@ -105,10 +106,83 @@ main{
 	color: #fff;
 	font-size: 11px;
 }
+.pagination{
+	text-align: center;
+	padding-top: 50px;
+}
+.pagination p{
+	/*paginationの中の要素なのでpaginaon pで指定できる
+	header .headlineと同じ*/
+	display: inline-block;
+	/*inline-blockって何？*/
+	width: 30px;
+	height: 30px;
+	color: #FFF;
+	background-color: #acabab;
+	border-radius: 3px;
+	margin: 0 5px;	/*どこを指定してるの？→左右に5pxの余白*/
+	line-height: 30px;	/*行の高さってどこ？*/
+}
+
 .sidebar{
 	width: 230px;
 	float: left; /*要素を左揃えで並ばせる*/
 }
+.sidebar-headline, .instagram-headline, .categories-headline{
+	border-bottom: 8px solid#f7f7f7;
+	text-align: center;
+	line-height: 0.6;	/*これ何だっけ？*/
+}
+.sidebar-contents{
+	padding: 50px 0;
+}
+.popular-text, .categories-text{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #f7f7f7;
+	margin-bottom: 5px;
+}
+.popular-text:last-child, .categories-text:last-child{
+	/*last-childは擬似クラスのこと
+	要素が特定の状態になった場合のみ適用されるCSS
+	今回の場合はpopular-textとcategories-textの
+	最後に記述された要素にのみ適用される*/
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.instagram-box{
+	float: left;
+	width: 110px;
+	padding-top: 110px;
+	background-size: cover;
+	background-position: center;
+	/*ここの指定はちょっと書いててわかんない*/
+}
+.instagram-box:nth-child(odd){
+	margin: 0 10px 10px 0;
+}
+.instagram-box:nth-child(1){
+	background-image: url(img/airport.jpg);
+}
+.instagram-box:nth-child(2) {
+    background-image: url(img/japan.jpg);
+}
+.instagram-box:nth-child(3) {
+    background-image: url(img/snow.jpg);
+}
+.instagram-box:nth-child(4) {
+    background-image: url(img/japan2.jpg);
+}
+.instagram-box:nth-child(5) {
+    background-image: url(img/lake.jpg);
+}
+.instagram-box:nth-child(6) {
+    background-image: url(img/road.jpg);
+}
+/*nth-childは特定して擬似クラスを指定できる
+例えは偶数、奇数、番号など
+今回はoddがinstagram-boxの奇数に対しての指定
+instagram-boxの各番号に対しての指定となっている*/
 
 
 footer{
