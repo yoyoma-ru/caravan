@@ -107,7 +107,6 @@ main{
 }
 .sidebar{
 	width: 230px;
-	background-color: palegreen;
 	float: left; /*要素を左揃えで並ばせる*/
 }
 
